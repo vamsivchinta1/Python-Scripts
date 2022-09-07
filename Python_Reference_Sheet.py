@@ -13,6 +13,14 @@ df.loc[:, df.columns != 'b']
 df[df.columns.difference(['b'])]
 df.drop(['a', 'b'], axis=1)
 
+'''extracting characters from columns'''
+df['col2'] = df['col1'].str[-4:] # right()
+df['col2'] = df['col1'].str[:5] # left()
+df['col2'] = df['col1'].str[3:8] # middle()
+df['col2'] = df['col1'].str.split('-').str[0] # Before a symbol
+df['col2'] = df['col1'].str.split('-').str[1]
+df['col2'] = df['col2'].str.split('$').str[0]
+
 '''row editting'''
 df.dropna(axis='index', how='any', inplace=True)
 
