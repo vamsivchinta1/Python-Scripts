@@ -4,7 +4,11 @@ new_directory = os.path.join(currentDirectory, r'NewDirectoryFolderName')
   if not os.path.exists(new_directory):
       os.makedirs(new_directory)
 
+      
 '''misc. table functions'''
+fp = 'C:\Users\vamsi\Aspirent Consulting, LLC\ActiveGraf - General\Analytics Platform Data Warehouse\my_new_file.csv'
+
+df.to_csv(path = fp, index=False)
 df.shape
       
 '''column editting'''
@@ -13,7 +17,7 @@ df.loc[:, ['food', 'color']]
 df1 = df.iloc[:,0:2]
 print(df.columns.values.tolist())
 df.loc[:, df.columns != 'b']
-df[df.columns.difference(['b'])]
+df = df[df.columns.difference(['target_col'])]
 df.drop(['a', 'b'], axis=1)
 
 '''extracting characters from columns'''
