@@ -3,6 +3,9 @@ pd.set_option('display.max_columns', None)
 new_directory = os.path.join(currentDirectory, r'NewDirectoryFolderName')
   if not os.path.exists(new_directory):
       os.makedirs(new_directory)
+
+'''misc. table functions'''
+df.shape
       
 '''column editting'''
 df1 = df[['a','b']]
@@ -23,6 +26,8 @@ df['col2'] = df['col2'].str.split('$').str[0]
 
 '''row editting'''
 df.dropna(axis='index', how='any', inplace=True)
+df = df.loc[(df["col1"] > 0) & (df["col2"] > 0)] # Deleting rows based on a column value
+
 
 '''list editting'''
 list = ['larry', 'curly', 'moe']
