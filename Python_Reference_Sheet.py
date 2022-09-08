@@ -4,11 +4,12 @@ new_directory = os.path.join(currentDirectory, r'NewDirectoryFolderName')
   if not os.path.exists(new_directory):
       os.makedirs(new_directory)
 
+cwd = os.getcwd()
+print("Current working directory: {0}".format(cwd))
       
 '''misc. table functions'''
-fp = 'C:\Users\vamsi\Aspirent Consulting, LLC\ActiveGraf - General\Analytics Platform Data Warehouse\my_new_file.csv'
-
-df.to_csv(path = fp, index=False)
+fp = 'C:\Users\vamsi\Aspirent Consulting, LLC\ActiveGraf - General\Analytics Platform Data Warehouse\'
+df.to_csv(path = fp,'my_new_file.csv', index=False)
 df.shape
       
 '''column editting'''
