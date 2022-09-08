@@ -1,3 +1,7 @@
+'''python libs'''
+import pandas as pd
+import os
+
 '''misc code:''' 
 pd.set_option('display.max_columns', None)
 new_directory = os.path.join(currentDirectory, r'NewDirectoryFolderName')
