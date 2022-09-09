@@ -10,6 +10,8 @@ new_directory = os.path.join(currentDirectory, r'NewDirectoryFolderName')
 
 cwd = os.getcwd()
 print("Current working directory: {0}".format(cwd))
+
+type(a) # id type of object
       
 '''misc. table functions'''
 fp = 'C:\Users\vamsi\Aspirent Consulting, LLC\ActiveGraf - General\Analytics Platform Data Warehouse\'
