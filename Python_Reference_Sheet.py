@@ -23,9 +23,14 @@ df1 = df[['a','b']]
 df.loc[:, ['food', 'color']]
 df1 = df.iloc[:,0:2]
 print(df.columns.values.tolist())
+print(df['col'].unique()) # list of unique column values
 df.loc[:, df.columns != 'b']
 df = df[df.columns.difference(['target_col'])]
 df.drop(['a', 'b'], axis=1)
+
+df['new_column'] = np.where(df['col2']<9, 'value1',
+                   np.where(df['col2']<12, 'value2',
+                   np.where(df['col2']<15, 'value3', 'value4')))
 
 '''extracting characters from columns'''
 df['col2'] = df['col1'].str[-4:] # right()
