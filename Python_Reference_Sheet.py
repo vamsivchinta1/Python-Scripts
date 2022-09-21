@@ -68,6 +68,7 @@ list(mi.columns.levels[0])   | mi = multiindex dataframe
 df.fillna('',inplace=True)
 df = df.fillna('')
 df[col].fillna(0, inplace=True)
+df['column_name'] = df['column_name'].replace('-','None')
 
 '''Joining'''
 df = pd.merge(df1, df2, on='A', how='inner')
