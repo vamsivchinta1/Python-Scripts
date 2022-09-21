@@ -33,6 +33,8 @@ df['new_column'] = np.where(df['col2']<9, 'value1',
                    np.where(df['col2']<15, 'value3', 'value4')))
 
 df.loc[:, df.columns.str.contains('Estimate')] # filtering out column names that contain a certain string
+or
+df.filter(like='Estimate')
 
 '''extracting characters from columns'''
 df['col2'] = df['col1'].str[-4:] # right()
