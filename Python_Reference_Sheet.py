@@ -38,6 +38,7 @@ df.filter(like='Estimate')
 
 ```editting cells by columns```
 df['B'].str.replace('[^\w\s]', '') # removing special characters but not spaces from cells 
+df['A'] = df['A'].div(100).round(2) # dividing cells by int
 
 '''extracting characters from columns'''
 df['col2'] = df['col1'].str[-4:] # right()
