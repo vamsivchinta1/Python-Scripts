@@ -36,6 +36,9 @@ df.loc[:, df.columns.str.contains('Estimate')] # filtering out column names that
 or
 df.filter(like='Estimate')
 
+```editting cells by columns```
+df['B'].str.replace('[^\w\s]', '') # removing special characters but not spaces from cells 
+
 '''extracting characters from columns'''
 df['col2'] = df['col1'].str[-4:] # right()
 df['col2'] = df['col1'].str[:5] # left()
