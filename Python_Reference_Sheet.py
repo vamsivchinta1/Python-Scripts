@@ -32,9 +32,12 @@ df['new_column'] = np.where(df['col2']<9, 'value1',
                    np.where(df['col2']<12, 'value2',
                    np.where(df['col2']<15, 'value3', 'value4')))
 
-df.loc[:, df.columns.str.contains('Estimate')] # filtering out column names that contain a certain string
+df.loc[:, df.columns.str.contains('Estimate')] # filtering In column names that contain a certain string
 or
 df.filter(like='Estimate')
+
+df = df.loc[:, ~df.columns.str.contains('Margin')] # filtering out column names that contain a certain string
+
 
 ```editting cells by columns```
 df['B'].str.replace('[^\w\s]', '') # removing special characters but not spaces from cells 
@@ -83,6 +86,7 @@ df.columns = df.columns.str.strip() #to remove all the leading or trailing space
 df.columns = df.columns.map(lambda x : x.replace("-", "_").replace(" ", "_")) #a simple lambda function to replace the space and hyphen with underscore
 dict = {'Dept.1':'Dept','Class.1':'Class'}
 df1.rename(columns=dict, inplace=True)
+df = df[['Year'] + [ col for col in df.columns if col != 'Year' ] ] # moving column to first position of a df
 
 
 '''Column Values Editting'''
