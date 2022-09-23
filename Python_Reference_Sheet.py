@@ -19,6 +19,7 @@ df.to_csv(path = fp,'my_new_file.csv', index=False)
 df.shape
       
 '''column editting'''
+data.rename(columns={'gdp':'log(gdp)'}, inplace=True) # rename one column name
 df1 = df[['a','b']]
 df.loc[:, ['food', 'color']]
 df1 = df.iloc[:,0:2]
