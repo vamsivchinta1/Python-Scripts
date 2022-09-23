@@ -76,8 +76,11 @@ df['column_name'] = df['column_name'].replace('-','None')
 
 '''Joining'''
 df = pd.merge(df1, df2, on='A', how='inner')
+df = pd.concat([df1, df2])
+
 '''Exporting Data'''
 df.to_excel('cat_kst_df.xlsx', sheet_name='Sheet_name_1')
+
 
 '''Column Header Editting'''
 df.columns = df.columns.str.upper()
