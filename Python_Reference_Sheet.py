@@ -11,6 +11,8 @@ new_directory = os.path.join(currentDirectory, r'NewDirectoryFolderName')
 cwd = os.getcwd()
 print("Current working directory: {0}".format(cwd))
 
+'''checking data types'''
+print(df.dtypes)
 type(a) # id type of object
       
 '''misc. table functions'''
