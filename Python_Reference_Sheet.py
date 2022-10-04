@@ -33,6 +33,9 @@ df['new_column'] = np.where(df['col2']<9, 'value1',
                    np.where(df['col2']<12, 'value2',
                    np.where(df['col2']<15, 'value3', 'value4')))
 
+col_names = ['nnn', 'mmm', 'yyy', 'zzzzzz']
+df.loc[:, df.columns.isin(col_names)] # filtering in columns by list of column names
+
 df.loc[:, df.columns.str.contains('Estimate')] # filtering In column names that contain a certain string
 or
 df.filter(like='Estimate')
