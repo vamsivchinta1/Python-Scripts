@@ -14,6 +14,9 @@ print("Current working directory: {0}".format(cwd))
 '''checking data types'''
 print(df.dtypes)
 type(a) # id type of object
+
+df = df.apply(pd.to_numeric) # convert dtype of all columns of DataFrame
+df[["a", "b"]] = df[["a", "b"]].apply(pd.to_numeric) # convert dtype of just columns "a" and "b"
       
 '''misc. table functions'''
 fp = 'C:\Users\vamsi\Aspirent Consulting, LLC\ActiveGraf - General\Analytics Platform Data Warehouse\'
