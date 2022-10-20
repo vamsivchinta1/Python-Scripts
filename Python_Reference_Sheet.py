@@ -65,6 +65,8 @@ df.dropna(axis='index', how='any', inplace=True)
 df = df.loc[(df["col1"] > 0) & (df["col2"] > 0)] # Deleting rows based on a column value
 df.loc[df['col1'].isin([value1, value2, value3, ...])] # Filtering in rows based on list of col values
 df = df.dropna(subset=['colA', 'colC']) # Drop rows where specific column values are null
+# using Datetime Package
+df[(df['date']>datetime.date(2016,1,1)) & (df['date']<datetime.date(2016,3,1))]  # filtering rows out based on date column
 
 
 '''list editting'''
