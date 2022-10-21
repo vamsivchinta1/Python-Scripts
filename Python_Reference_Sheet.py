@@ -24,6 +24,7 @@ df.to_csv(path = fp,'my_new_file.csv', index=False)
 df.shape
       
 '''column editting'''
+df1 = df1.sort_values(by=['Date','LICENSE NUMBER'])
 data.rename(columns={'gdp':'log(gdp)'}, inplace=True) # rename one column name
 df1 = df[['a','b']]
 df.loc[:, ['food', 'color']]
