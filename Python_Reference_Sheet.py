@@ -1,35 +1,21 @@
-'''python libs'''
-import pandas as pd
-import os
+'''Column Header Editting'''
+print(df.columns.values.tolist())
+df.columns = df.columns.str.upper()
+df.columns = df.columns.str.lower()
+df.columns = df.columns.str.title() #camel casing
+df.columns = df.columns.str.strip() #to remove all the leading or trailing spaces
+df.columns = df.columns.map(lambda x : x.replace("-", "_").replace(" ", "_")) #a simple lambda function to replace the space and hyphen with underscore
+dict = {'Dept.1':'Dept','Class.1':'Class'}
+df1.rename(columns=dict, inplace=True)
+df = df[['Year'] + [ col for col in df.columns if col != 'Year' ] ] # moving column to first position of a df
 
-'''misc code:''' 
-pd.set_option('display.max_columns', None)
-new_directory = os.path.join(currentDirectory, r'NewDirectoryFolderName')
-  if not os.path.exists(new_directory):
-      os.makedirs(new_directory)
-
-cwd = os.getcwd()
-print("Current working directory: {0}".format(cwd))
-
-'''checking data types'''
-print(df.dtypes)
-type(a) # id type of object
-
-df = df.apply(pd.to_numeric) # convert dtype of all columns of DataFrame
-df[["a", "b"]] = df[["a", "b"]].apply(pd.to_numeric) # convert dtype of just columns "a" and "b"
-      
-'''misc. table functions'''
-fp = 'C:\Users\vamsi\Aspirent Consulting, LLC\ActiveGraf - General\Analytics Platform Data Warehouse\'
-df.to_csv(path = fp,'my_new_file.csv', index=False)
-df.shape
-      
 '''column editting'''
 df1 = df1.sort_values(by=['Date','LICENSE NUMBER'])
 data.rename(columns={'gdp':'log(gdp)'}, inplace=True) # rename one column name
 df1 = df[['a','b']]
 df.loc[:, ['food', 'color']]
 df1 = df.iloc[:,0:2]
-print(df.columns.values.tolist())
+
 print(df['col'].unique()) # list of unique column values
 df.loc[:, df.columns != 'b']
 df = df[df.columns.difference(['target_col'])]
@@ -48,15 +34,7 @@ df.filter(like='Estimate')
 
 df = df.loc[:, ~df.columns.str.contains('Margin')] # filtering out column names that contain a certain string
 
-'''Column Header Editting'''
-df.columns = df.columns.str.upper()
-df.columns = df.columns.str.lower()
-df.columns = df.columns.str.title() #camel casing
-df.columns = df.columns.str.strip() #to remove all the leading or trailing spaces
-df.columns = df.columns.map(lambda x : x.replace("-", "_").replace(" ", "_")) #a simple lambda function to replace the space and hyphen with underscore
-dict = {'Dept.1':'Dept','Class.1':'Class'}
-df1.rename(columns=dict, inplace=True)
-df = df[['Year'] + [ col for col in df.columns if col != 'Year' ] ] # moving column to first position of a df
+
 
 ```editting cells by columns```
 df['B'].str.replace('[^\w\s]', '') # removing special characters but not spaces from cells 
@@ -112,3 +90,43 @@ df['datetime'] = pd.to_datetime(df['datetime']).dt.date
 
 '''Dates'''
 df2['Date'] = pd.to_datetime(df.Year, format='%Y') #convert year column to date
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'''python libs'''
+import pandas as pd
+import os
+
+'''misc code:''' 
+pd.set_option('display.max_columns', None)
+new_directory = os.path.join(currentDirectory, r'NewDirectoryFolderName')
+  if not os.path.exists(new_directory):
+      os.makedirs(new_directory)
+
+cwd = os.getcwd()
+print("Current working directory: {0}".format(cwd))
+
+'''checking data types'''
+print(df.dtypes)
+type(a) # id type of object
+
+df = df.apply(pd.to_numeric) # convert dtype of all columns of DataFrame
+df[["a", "b"]] = df[["a", "b"]].apply(pd.to_numeric) # convert dtype of just columns "a" and "b"
+      
+'''misc. table functions'''
+fp = 'C:\Users\vamsi\Aspirent Consulting, LLC\ActiveGraf - General\Analytics Platform Data Warehouse\'
+df.to_csv(path = fp,'my_new_file.csv', index=False)
+df.shape
