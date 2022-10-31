@@ -10,6 +10,7 @@ df1.rename(columns=dict, inplace=True)
 df = df[['Year'] + [ col for col in df.columns if col != 'Year' ] ] # moving column to first position of a df
 
 '''column editting'''
+df1['Age Group'].unique()
 df1 = df1.sort_values(by=['Date','LICENSE NUMBER'])
 data.rename(columns={'gdp':'log(gdp)'}, inplace=True) # rename one column name
 df1 = df[['a','b']]
