@@ -87,10 +87,11 @@ df.to_excel('cat_kst_df.xlsx', sheet_name='Sheet_name_1')
 
 '''Column Values Editting'''
 data["First Name"]= data["First Name"].str.lower()
-df['datetime'] = pd.to_datetime(df['datetime']).dt.date
 
-'''Dates'''
+
+'''Working w/ Dates'''
 df2['Date'] = pd.to_datetime(df.Year, format='%Y') #convert year column to date
+df['datetime'] = pd.to_datetime(df['datetime']).dt.date
 
 
 
