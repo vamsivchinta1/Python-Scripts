@@ -50,6 +50,8 @@ df['col2'] = df['col1'].str.split('-').str[1]
 df['col2'] = df['col2'].str.split('$').str[0]
 
 '''row editting'''
+df = df.sample(n = 3) # To get 3 random rows
+df = df.sample(frac = 0.5) # here you get .50 % of the rows
 df.dropna(axis='index', how='any', inplace=True)
 df = df.loc[(df["col1"] > 0) & (df["col2"] > 0)] # Deleting rows based on a column value
 df = df[df['zip'].notnull()] # Drop rows with None/NaN
