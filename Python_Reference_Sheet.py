@@ -131,7 +131,10 @@ new_directory = os.path.join(currentDirectory, r'NewDirectoryFolderName')
 cwd = os.getcwd()
 print("Current working directory: {0}".format(cwd))
 
-
+'''group by'''
+df_cal = df_cal.groupby(['Year']).agg(
+    date = pd.NamedAgg(column = 'Date', aggfunc=min)
+)
       
 '''misc. table functions'''
 fp = 'C:\Users\vamsi\Aspirent Consulting, LLC\ActiveGraf - General\Analytics Platform Data Warehouse\'
