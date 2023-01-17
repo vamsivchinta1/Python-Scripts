@@ -5,6 +5,7 @@
 - [Changing DTypes](https://github.com/vamsivchinta1/Python-Scripts/blob/main/Python%20Cheat%20Sheets/Changing%20DTypes.md)
 
 ## Transforming
+- [Removing Columns](https://github.com/vamsivchinta1/Python-Scripts/blob/main/Python%20Cheat%20Sheets/Removing%20Columns.md)
 - [Group by](https://github.com/vamsivchinta1/Python-Scripts/blob/main/Python%20Cheat%20Sheets/Group-By.md)
 - [Joins](https://github.com/vamsivchinta1/Python-Scripts/blob/main/Python%20Cheat%20Sheets/Joins.md)
 
