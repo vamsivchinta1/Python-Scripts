@@ -1,18 +1,3 @@
-'''Column Header Editting'''
-print(df.columns.values.tolist())
-df.columns = df.columns.str.upper()
-df.columns = df.columns.str.lower()
-df.columns = df.columns.str.title() #camel casing
-df.columns = df.columns.str.strip() #to remove all the leading or trailing spaces
-df.columns = df.columns.map(lambda x : x.replace("-", "_").replace(" ", "_")) #a simple lambda function to replace the space and hyphen with underscore
-dict = {'Dept.1':'Dept','Class.1':'Class'}
-df1.rename(columns=dict, inplace=True)
-df = df[['Year'] + [ col for col in df.columns if col != 'Year' ] ] # moving column to first position of a df
-
-
-
-
-
 ```editting cells by columns```
 df['B'].str.replace('[^\w\s]', '') # removing special characters but not spaces from cells 
 df['A'] = df['A'].div(100).round(2) # dividing cells by int
@@ -66,13 +51,6 @@ df.to_excel('cat_kst_df.xlsx', sheet_name='Sheet_name_1')
 
 '''Column Values Editting'''
 data["First Name"]= data["First Name"].str.lower()
-
-
-'''Working w/ Dates'''
-df2['Date'] = pd.to_datetime(df.Year, format='%Y') #convert year column to date
-df['datetime'] = pd.to_datetime(df['datetime']).dt.date
-df['year'] = pd.DatetimeIndex(df['birth_date']).year #extracting year from date col
-
 
 
 '''working with data types'''
