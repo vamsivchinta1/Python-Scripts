@@ -8,6 +8,7 @@ Renaming Column Headers
 dict = {'Dept.1':'Dept','Class.1':'Class'}
 df1.rename(columns=dict, inplace=True)
 ```
+Formatting Column Headers
 ```python
 df.columns = df.columns.str.upper()
 df.columns = df.columns.str.lower()
