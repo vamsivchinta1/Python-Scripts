@@ -22,5 +22,5 @@ df = df[['Year'] + [ col for col in df.columns if col != 'Year' ] ] # moving col
 ```
 Dropping Columns
 ```python
-df.drop(['C', 'D'], axis=1) # Remove two columns name is 'C' and 'D'
+df.drop(['C', 'D'], axis=1, inplace=True) # Remove two columns name is 'C' and 'D'
 ```
