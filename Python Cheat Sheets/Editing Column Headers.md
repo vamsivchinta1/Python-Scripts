@@ -20,3 +20,7 @@ Rearranging Column Headers
 ```python
 df = df[['Year'] + [ col for col in df.columns if col != 'Year' ] ] # moving column to first position of a df
 ```
+Dropping Columns
+```python
+df.drop(['C', 'D'], axis=1) # Remove two columns name is 'C' and 'D'
+```
