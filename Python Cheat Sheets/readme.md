@@ -10,5 +10,8 @@
 - [Group by](https://github.com/vamsivchinta1/Python-Scripts/blob/main/Python%20Cheat%20Sheets/Group-By.md)
 - [Joins](https://github.com/vamsivchinta1/Python-Scripts/blob/main/Python%20Cheat%20Sheets/Joins.md)
 
+## Exploration
+- [Other](https://github.com/vamsivchinta1/Python-Scripts/blob/main/Python%20Cheat%20Sheets/Other.md)
+
 ## Writing Data
 - [Writing Data](https://github.com/vamsivchinta1/Python-Scripts/blob/main/Python%20Cheat%20Sheets/Writing%20Data.md)
