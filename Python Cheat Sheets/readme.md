@@ -14,5 +14,8 @@
 ## Exploration
 - [Other](https://github.com/vamsivchinta1/Python-Scripts/blob/main/Python%20Cheat%20Sheets/Other.md)
 
+## Printing Outputs
+- [Go-To Print Commands]()
+
 ## Writing Data
 - [Writing Data](https://github.com/vamsivchinta1/Python-Scripts/blob/main/Python%20Cheat%20Sheets/Writing%20Data.md)
