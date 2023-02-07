@@ -11,6 +11,7 @@ print(  'df_raw:','\n\t',df_raw.shape,'\n\t',df_raw.columns.values.tolist()
 )
 ```
 <img width="273" alt="image" src="https://user-images.githubusercontent.com/42124199/215791057-baf1741f-9d24-4369-96bc-6e5eb08314cf.png">
+
 ```python
 print(  'df_wpap_worker_fact_by_month:'
         ,'\n\t', os.path.split(fp)[-1]
