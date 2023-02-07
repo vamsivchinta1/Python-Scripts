@@ -24,3 +24,4 @@ print(  'df_wpap_worker_fact_by_month:'
         ,'\n\t','# of Programs:', df_wpap_worker_fact_by_month['oin'].drop_duplicates().reset_index(drop=True).shape[0]
 )
 ```
+![image](https://user-images.githubusercontent.com/42124199/217353954-bede66fc-1efa-47f4-bdb2-d160e2f48f9a.png)
