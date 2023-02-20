@@ -25,3 +25,8 @@ print(  'df_wpap_worker_fact_by_month:'
 )
 ```
 ![image](https://user-images.githubusercontent.com/42124199/217353954-bede66fc-1efa-47f4-bdb2-d160e2f48f9a.png)
+
+```python
+import warnings
+warnings.filterwarnings("ignore")
+```
