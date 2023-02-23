@@ -14,3 +14,5 @@ def q75(x):
 
     df_job_dim = df_worker_fact_by_month.groupby(['job_title','job_title_updated'],as_index=False).agg({'hourly_pay_derived':['mean','median',q75,'max']}).round(2)
 ```
+useful links: 
+1. https://pbpython.com/groupby-agg.html
