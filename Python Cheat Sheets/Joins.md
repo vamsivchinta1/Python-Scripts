@@ -1,6 +1,8 @@
 ### Joining
 ```python
 df = pd.merge(df1, df2, on='A', how='inner')
+new_df = pd.merge(A_df, B_df,  how='left', left_on=['A_c1','c2'], right_on = ['B_c1','c2'])
+
 ```
 ```python
 df = pd.concat([df1, df2])
