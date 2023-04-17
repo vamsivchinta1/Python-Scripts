@@ -6,7 +6,7 @@ df1 = df.iloc[:,0:2]
 
 df.loc[:, df.columns != 'b']
 df = df[df.columns.difference(['target_col'])]
-df.drop(['a', 'b'], axis=1)
+df.drop(['a', 'b'], axis=1, inplace=True) # filtering out cols by value
 
 col_names = ['nnn', 'mmm', 'yyy', 'zzzzzz']
 df.loc[:, df.columns.isin(col_names)] # filtering in columns by list of column names
