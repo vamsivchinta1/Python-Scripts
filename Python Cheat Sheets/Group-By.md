@@ -15,6 +15,9 @@ def q75(x):
     df_job_dim = df_worker_fact_by_month.groupby(['job_title','job_title_updated'],as_index=False).agg({'hourly_pay_derived':['mean','median',q75,'max']}).round(2)
     
     #used to flatten table after group by
+    # method 1
+    df_base.columns = ['_'.join(col).rstrip('_') for col in df_base.columns.values]
+    # method 2
     df = df.droplevel(axis=1, level=1).reset_index()
 ```
 useful links: 
